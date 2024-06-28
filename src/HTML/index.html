@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
         <title>Beekeeper</title>
     </head>
     <link rel="stylesheet" href="../CSS/main.css" />
@@ -12,24 +18,24 @@
         <header>
             <!-- nav 시맨틱 태그 사용 -->
             <nav>
-                <div class="logo">
-                    <div>
+                <div class="navbar__logo__container">
+                    <div class="navbar__logo__container__imgbox">
                         <img
                             src="https://cdn.pixabay.com/photo/2021/01/14/18/19/bee-5917610_960_720.png"
                             alt="꿀벌사진이에염"
                         />
                     </div>
-                    <div>
+                    <div class="navbar__logo__container__brand">
                         <p>Beekeeper</p>
                     </div>
                 </div>
-                <ul>
+                <ul class="navbar__menulist">
                     <li><a href="./index.html">HOME</a></li>
                     <li><a href="javascript:void(0)">ABOUT</a></li>
                     <li><a href="javascript:void(0)">SHOP</a></li>
                     <li><a href="javascript:void(0)">NOTICE</a></li>
                 </ul>
-                <ul>
+                <ul class="navbar_menulist__member">
                     <li><a href="javascript:void(0)">Login</a></li>
                     <li><a href="javascript:void(0)">SignUp</a></li>
                 </ul>
