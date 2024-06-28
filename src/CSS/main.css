@@ -1,0 +1,13 @@
+header nav {
+  display: flex;
+}
+header nav div {
+  width: 100%;
+  height: 5rem;
+}
+header nav .logo {
+  background-color: orange;
+}
+header nav .logo div img {
+  width: 5rem;
+}/*# sourceMappingURL=main.css.map */

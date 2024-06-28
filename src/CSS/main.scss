@@ -1,0 +1,17 @@
+header {
+    nav {
+        display: flex;
+        div {
+            width: 100%;
+            height: 5rem;
+        }
+        .logo {
+            background-color: orange;
+            div {
+                img {
+                    width: 5rem;
+                }
+            }
+        }
+    }
+}
