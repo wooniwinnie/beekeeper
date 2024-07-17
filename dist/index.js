@@ -35,6 +35,20 @@ if ($img) {
         $imgControl.addMarginTop();
     });
 }
+/**
+ * 비키퍼 이미지 슬라이드 기능 구현하기
+ * 상품 이미지 컨테이너에 표현할 수 있는 상품 이미지는 총 세개
+ * 가운데 이미지가 양쪽에 있는 이미지보다 클것
+ * 상품 이미지에는 그림자 효과가 있을 것
+ * 왼쪽, 오른쪽 화살표 버튼이 있고, 그것을 누르면 상품이미지가 양쪽으로 이동한다
+ */
+/**
+ * 1. HTML 요소 생성
+ * 유사 배열 객체처럼 사용하기 위해 공통적인 클래스를 지정한다.
+ */
+/**
+ * 2.
+ */
 // 공부하기
 // const $text = document.querySelectorAll<HTMLElement>('.wrapper p');
 // const $textStyle = { marginRight: '100px' };
