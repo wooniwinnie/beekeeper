@@ -5,7 +5,7 @@ $font-white: #fff;
 body {
     // <uniquifier>: Use a unique and descriptive class name
     // <weight>: Use a value from 100 to 900
-
+    position: relative;
     font-family: 'Noto Sans KR', sans-serif;
     font-optical-sizing: auto;
 
@@ -17,44 +17,65 @@ body {
         list-style: none;
     }
 }
-header {
-    // background-color: orange;
-    nav {
-        display: flex;
-        justify-content: space-around;
-        .navbar__logo__container {
-            display: inherit;
-            align-items: center;
-            .navbar__logo__container__imgbox {
-                img {
-                    width: 7rem;
-                }
-            }
-            .navbar__logo__container__brand {
-                p {
-                    font-size: 2rem;
-                    color: $font-black;
-                }
+.maindoor {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    background-color: #333;
+    z-index: 1;
+    .maindoor__contents__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .maindoor__contents__imgbox {
+            img {
+                width: 15rem;
             }
         }
-        // menuslist, menulist__member의 ul, li는 같으므로 따로따로 스타일링 하는 것보다
-        // 한번에 스타일링을 하기 위해 ul, li 요소에 스타일링을 줌
-        ul {
-            display: flex;
-            align-items: center;
-
-            li {
-                padding: 1rem;
-                a {
-                    color: $font-black;
-                }
+        .maindoor__contents__textbox {
+            text-align: center;
+            h1,
+            button {
+                padding: 1.5rem 0;
             }
+            h1 {
+                color: $font-white;
+            }
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                height: 2rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+header {
+    width: 100%;
+    height: 10rem;
+    nav {
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        li {
+            padding: 3rem;
+            // text-decoration: underline;
         }
         .navbar__menulist {
+            display: flex;
+            justify-content: center;
+
             li {
             }
         }
         .navbar__menulist__member {
+            display: flex;
             li {
             }
         }
@@ -64,57 +85,4 @@ header {
 // MAIN
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    section {
-        article {
-            position: relative;
-            h1,
-            p {
-                position: absolute;
-                font-weight: bold;
-            }
-            h1 {
-                top: 0;
-            }
-            p {
-                bottom: 0;
-            }
-        }
-    }
-    .wrapper {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        width: 100%;
-        height: 100vw;
-        gap: 0;
-        h1,
-        p {
-            color: $font-white;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-        }
-        .wrapper__one {
-            width: 100%;
-            grid-column: 1/2;
-            grid-row: 1/3;
-        }
-        .wrapper__two {
-            width: 100%;
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-        .wrapper__three {
-            width: 100%;
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-    }
 }

@@ -1,11 +1,65 @@
 "use strict";
 /**
+ * 첫인상이 중요하다.
+ * 내가 만드는 홈페이지에도 강인한 첫인상을 주고 싶다.
+ */
+// const mainDoor = document.querySelector<HTMLElement>('.maindoor');
+// const openTheDoor = document.querySelector<HTMLElement>(
+//     '.maindoor__contents__textbox button'
+// );
+// const mainDoorStyle = { opacity: '0', transition: 'all 1s' };
+// openTheDoor?.addEventListener('click', () => {
+//     if (mainDoor) {
+//         Object.assign(mainDoor.style, mainDoorStyle);
+//         if (mainDoor) {
+//             setTimeout(() => {
+//                 Object.assign(mainDoor.style, { display: 'none' });
+//             }, 500);
+//         }
+//     }
+// });
+// console.log(mainDoorStyle.opacity === '0');
+// NAVBAR
+// navbar list 메뉴들에 마우스를 올리면 underline이 생긴다.
+// underline 스타일을 적용할 HTML 요소들을 선택한다.
+const navMenu = document.querySelectorAll('nav li');
+// underline 스타일을 변수에 할당
+// const underLineStyle: Partial<CSSStyleDeclaration> = {
+//     textDecoration: 'underline',
+// };
+// underline 스타일을 변수가 아닌 객체 리터럴로 생성해봄ㅋㅋ
+const underLineStyle = [
+    {
+        textDecoration: 'underline',
+    },
+    {
+        textDecoration: 'none',
+    },
+];
+// HTML 요소들에 이벤트 함수를 적용한다.
+navMenu.forEach((menu) => {
+    menu.addEventListener('mouseover', (e) => {
+        if (e.target) {
+            Object.assign(menu.style, underLineStyle[0]);
+        }
+        menu.addEventListener('mouseleave', (e) => {
+            if (e.target) {
+                Object.assign(menu.style, underLineStyle[1]);
+            }
+        });
+    });
+});
+/**
  * HTML 요소 마진 조작을 클래스로 만드려는 이유는 무엇이니?
  * 스타일 조작 코드를 매번 작성하는 것보다 클래스의 메소드로 작성하는 것이
  * 코드의 재사용성과 가독성 측면에서 나을 것같아서???
  */
 // 마진 조작 클래스 생성
 class ControlMargin {
+    // 인스턴스의 프로퍼티 타입 지정
+    // elem은 단일 요소일수도, 다수 요소일수도 있으므로 유니온 타입을 사용함
+    elem;
+    styles;
     constructor(elem, styles) {
         // 인스턴스 초기화
         this.elem = elem;
@@ -32,7 +86,7 @@ const style = { marginTop: '-100px' };
 if ($img) {
     const $imgControl = new ControlMargin($img, style);
     $img.addEventListener('click', function () {
-        $imgControl.addMarginTop();
+        // $imgControl.addMarginTop();
     });
 }
 /**
