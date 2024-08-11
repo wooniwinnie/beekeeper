@@ -1,0 +1,84 @@
+// COMMON
+$font-black: #333;
+$font-white: #fff;
+$box-color: #f2b705;
+
+body {
+    // <uniquifier>: Use a unique and descriptive class name
+    // <weight>: Use a value from 100 to 900
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-optical-sizing: auto;
+
+    a {
+        color: $font-black;
+        text-decoration: none;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+// HEADER NAVBAR
+
+header {
+    width: 100%;
+    height: 10rem;
+    nav {
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        li {
+            padding: 3rem;
+            // text-decoration: underline;
+        }
+        .navbar__menulist {
+            display: flex;
+            justify-content: center;
+
+            li {
+            }
+        }
+        .navbar__menulist__member {
+            display: flex;
+            li {
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    width: 100%;
+    height: 20rem;
+    background-color: $box-color;
+    // color: $font-white;
+    .footer__list__container {
+        display: flex;
+        justify-content: space-evenly;
+        .footer__list {
+            h4 {
+                font-size: 1.2rem;
+                padding: 1rem 0;
+            }
+            ul {
+                li {
+                    padding: 0.3rem 0;
+
+                    a {
+                        // color: $font-white;
+                    }
+                }
+            }
+        }
+    }
+}
+.copyright {
+    background-color: #a66d03;
+    p {
+        color: $font-white;
+        text-align: center;
+    }
+}

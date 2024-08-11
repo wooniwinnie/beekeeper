@@ -1,0 +1,33 @@
+main .company__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+main .company__title h1 {
+  font-size: 1.5rem;
+}
+main .company__title .company__title__menu {
+  display: flex;
+}
+main .company__title .company__title__menu li {
+  padding: 0 1rem;
+  cursor: pointer;
+}
+main .company__container__content {
+  padding: 2rem 0;
+}
+main .company__container__content .company__container__content__imgbox img {
+  width: 100%;
+}
+main .company__container__content .company__container__content__contentbox {
+  text-align: center;
+}
+main .company__container__content .company__container__content__contentbox h1 {
+  font-size: 2rem;
+  padding: 3rem 0;
+  color: orange;
+}
+main .company__container__content .company__container__content__contentbox p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}/*# sourceMappingURL=company.css.map */

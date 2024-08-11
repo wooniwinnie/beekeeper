@@ -1,22 +1,3 @@
-// COMMON
-$font-black: #333;
-$font-white: #fff;
-
-body {
-    // <uniquifier>: Use a unique and descriptive class name
-    // <weight>: Use a value from 100 to 900
-    position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-optical-sizing: auto;
-
-    a {
-        color: $font-black;
-        text-decoration: none;
-    }
-    li {
-        list-style: none;
-    }
-}
 .maindoor {
     width: 100vw;
     height: 100%;
@@ -54,35 +35,97 @@ body {
         }
     }
 }
-header {
+
+// MAIN SLIDER
+
+main {
+    overflow: hidden;
+    .wrapper {
+        display: flex;
+        position: relative;
+        img {
+            width: 100vw;
+            height: 100vh;
+        }
+        h1,
+        p {
+            position: absolute;
+            color: $font-white;
+        }
+        h1 {
+            top: 0;
+            font-size: 2rem;
+        }
+        p {
+            top: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+    button {
+        position: absolute;
+        top: 15%;
+        background-color: transparent;
+        color: $font-white;
+        border: transparent;
+    }
+    .prev__btn {
+        left: 0;
+    }
+    .next__btn {
+        right: 0;
+    }
+}
+
+// First Section
+
+#briefintroduction {
     width: 100%;
-    height: 10rem;
-    nav {
-        height: 10rem;
+    height: 100%;
+    .titlebox {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        color: orange;
+        padding: 5rem 0;
+    }
+    .briefintroduction__container {
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        text-align: center;
-        li {
-            padding: 3rem;
-            // text-decoration: underline;
-        }
-        .navbar__menulist {
-            display: flex;
-            justify-content: center;
-
-            li {
+        .briefintroduction__container__imgbox {
+            width: 50%;
+            z-index: 1;
+            img {
+                width: 100%;
             }
         }
-        .navbar__menulist__member {
-            display: flex;
-            li {
-            }
+    }
+    .briefintroduction__container__imgbox,
+    .briefintroduction__container__textbox {
+        padding: 5rem 0;
+    }
+    .briefintroduction__container__textbox {
+        width: 40%;
+        margin-left: -650px;
+        h1,
+        p {
+            padding: 1rem 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
         }
     }
 }
 
-// MAIN
-
-main {
+// SUBSCRIBE SECTION
+#subscribe__section {
+    width: 100%;
+    .subscribe__section__container {
+        display: flex;
+        justify-content: end;
+    }
 }

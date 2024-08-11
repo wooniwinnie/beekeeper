@@ -1,0 +1,38 @@
+main {
+    .company__title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        h1 {
+            font-size: 1.5rem;
+        }
+        .company__title__menu {
+            display: flex;
+            li {
+                padding: 0 1rem;
+                cursor: pointer;
+                // color: gray;
+            }
+        }
+    }
+    .company__container__content {
+        padding: 2rem 0;
+        .company__container__content__imgbox {
+            img {
+                width: 100%;
+            }
+        }
+        .company__container__content__contentbox {
+            text-align: center;
+            h1 {
+                font-size: 2rem;
+                padding: 3rem 0;
+                color: orange;
+            }
+            p {
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
