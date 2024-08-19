@@ -3,7 +3,139 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <title>Beekeeper</title>
     </head>
-    <body></body>
+    <link rel="stylesheet" href="../CSS/css-reset.css" />
+    <link rel="stylesheet" href="../CSS/common.css" />
+    <link rel="stylesheet" href="../CSS/products.css" />
+    <script type="module" src="/dist/products.js" defer></script>
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <!-- nav 시맨틱 태그 사용 -->
+            <nav>
+                <ul class="navbar__menulist">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="javascript:void(0)">ABOUT</a></li>
+                    <li><a href="javascript:void(0)">SHOP</a></li>
+                    <li><a href="javascript:void(0)">NOTICE</a></li>
+                </ul>
+                <ul class="navbar__menulist__member">
+                    <li><a href="javascript:void(0)">Login</a></li>
+                    <li><a href="javascript:void(0)">SignUp</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="products__container"></section>
+        <section id="products__addform">
+            <form id="productsForm" action="">
+                <label for="">Product Image:</label>
+                <textarea id="productsImage" name="productsImage"></textarea>
+
+                <label for="productsAlt">productsAlt</label>
+                <textarea id="productsAlt" name="productsAlt"></textarea>
+
+                <label for="">Product Name:</label>
+                <input type="text" id="productsName" name="productsName" />
+
+                <label for="">Product Detail:</label>
+                <textarea id="productsDetail" name="productsDetail"></textarea>
+
+                <label for="">Product Price:</label>
+                <input type="number" id="productsPrice" name="productsPrice" />
+
+                <button type="submit">Add Product</button>
+                <button>Cancle</button>
+            </form>
+        </section>
+        <footer>
+            <section class="footer__list__container">
+                <article class="footer__list">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)">About Us</a></li>
+                        <li><a href="javascript:void(0)">Careers</a></li>
+                        <li><a href="javascript:void(0)">Press</a></li>
+                        <li><a href="jaarticlevascript:void(0)">Blog</a></li>
+                    </ul>
+                </article>
+                <article class="footer__list">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)">Help Center</a></li>
+                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                        <li><a href="javascript:void(0)">FAQ</a></li>
+                        <li><a href="javascript:void(0)">Community</a></li>
+                    </ul>
+                </article>
+                <article class="footer__list">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">Terms of Service</a>
+                        </li>
+                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)">Cookie Policy</a></li>
+                        <li><a href="javascript:void(0)">Accessibility</a></li>
+                    </ul>
+                </article>
+                <article class="footer__list">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)"
+                                >Shipping Information</a
+                            >
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Returns & Exchanges</a>
+                        </li>
+                        <li><a href="javascript:void(0)">Order Tracking</a></li>
+                        <li><a href="javascript:void(0)">Product Guide</a></li>
+                    </ul>
+                </article>
+                <article class="footer__list">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Twitter</a>
+                        </li>
+                        <li><a href="javascript:void(0)">Instagram</a></li>
+                        <li><a href="javascript:void(0)">YouTube</a></li>
+                    </ul>
+                </article>
+                <article class="footer__list">
+                    <h4>Other Link</h4>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Store Locator</a>
+                        </li>
+                        <li><a href="javascript:void(0)">Gift Cards</a></li>
+                        <li>
+                            <a href="javascript:void(0)">Newsletter Signup</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </footer>
+        <section class="copyright">
+            <p>&copy; 2024 Beekeeper. All rights reserved.</p>
+        </section>
+    </body>
 </html>

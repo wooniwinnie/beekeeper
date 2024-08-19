@@ -50,7 +50,7 @@ const companyMenu = [
 ];
 
 // 만들어진 요소를 삽입하는 함수
-function addElem(
+export function addElem(
     parentElem: HTMLElement,
     position: InsertPosition,
     content: string

@@ -1,4 +1,3 @@
-"use strict";
 // ABOUT 메뉴를 클릭하면, footer 메뉴의 Company 리스트 내부에
 // About Us, Careers, Press, Blog 페이지들이 존재한다.
 // 동일한 HTML 틀을 제작하여, 각각 서브메뉴들을 클릭했을 때, 페이지들을 다르게
@@ -48,7 +47,7 @@ const companyMenu = [
     },
 ];
 // 만들어진 요소를 삽입하는 함수
-function addElem(parentElem, position, content) {
+export function addElem(parentElem, position, content) {
     if (parentElem) {
         parentElem.insertAdjacentHTML(position, content);
     }
