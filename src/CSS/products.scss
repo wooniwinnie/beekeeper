@@ -39,8 +39,9 @@
 }
 
 #products__addform {
+    width: 100%;
     #productsForm {
-        // background-color: cadetblue;
+        position: relative;
         label,
         textarea,
         input {
@@ -52,10 +53,16 @@
             height: 1rem;
         }
         label {
+            font-weight: bold;
         }
         textarea {
         }
         input {
+        }
+        button {
+        }
+        .cancle__btn {
+            right: 0;
         }
     }
 }

@@ -32,6 +32,12 @@
   font-size: 1.2rem;
   padding: 1rem 0;
 }
+#products__addform {
+  width: 100%;
+}
+#products__addform #productsForm {
+  position: relative;
+}
 #products__addform #productsForm label,
 #products__addform #productsForm textarea,
 #products__addform #productsForm input {
@@ -41,4 +47,10 @@
 #products__addform #productsForm input {
   width: 15rem;
   height: 1rem;
+}
+#products__addform #productsForm label {
+  font-weight: bold;
+}
+#products__addform #productsForm .cancle__btn {
+  right: 0;
 }/*# sourceMappingURL=products.css.map */

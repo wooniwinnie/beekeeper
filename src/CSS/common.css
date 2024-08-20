@@ -1,6 +1,6 @@
 body {
   position: relative;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", "Playfair Display", "New Amsterdam";
   font-optical-sizing: auto;
 }
 body a {

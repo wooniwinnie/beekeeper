@@ -7,7 +7,7 @@ body {
     // <uniquifier>: Use a unique and descriptive class name
     // <weight>: Use a value from 100 to 900
     position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', 'Playfair Display', 'New Amsterdam';
     font-optical-sizing: auto;
 
     a {
@@ -30,8 +30,10 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
+
         li {
             padding: 3rem;
+
             // text-decoration: underline;
         }
         .navbar__menulist {

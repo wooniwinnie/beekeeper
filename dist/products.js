@@ -77,7 +77,6 @@ productsForm?.addEventListener('submit', (e) => {
 });
 console.log(products);
 // 배열을 순회하면서 요소를 생성하는 함수
-let btnCount = 0;
 function productsElem() {
     let insertItems = '';
     products.forEach((item, index) => {
@@ -87,7 +86,7 @@ function productsElem() {
                         src="${item.productImg.imgUrl}"
                         alt="${item.productImg.imgAlt}"
                     />
-                    <button><span>${btnCount}</span></button>
+                    <button class='like__btn'><span class='btn__count'>0</span></button>
                 </div>
                 <div class="products__content__textbox">
                     <h1>${item.productTitle}</h1>
@@ -103,3 +102,18 @@ const productsParent = document.querySelector('#products__container');
 if (productsParent) {
     addElem(productsParent, 'afterbegin', productsElem());
 }
+const likeBtn = document.querySelectorAll('.like__btn');
+const btnCountElemt = document.querySelector('.btn__count');
+likeBtn.forEach((btnItem, index) => {
+    let count = 0;
+    const btnIndex = likeBtn[index];
+    btnItem.addEventListener('click', (e) => {
+        // 지금 클릭되어지는 요소가 참이면, btnCount를 쁠라스 시켜줘
+        if (e.target) {
+            count++;
+            if (btnCountElemt) {
+                btnCountElemt.innerHTML = `${count}`;
+            }
+        }
+    });
+});
