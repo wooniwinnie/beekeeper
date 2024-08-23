@@ -8,6 +8,7 @@ const products = [
         productTitle: 'Pure Honey',
         productDetail: 'Law, Pure Honey is the most basic honey we sell at our company and is popular worldwide.',
         productPrice: 18000,
+        productLike: 0,
     },
     {
         productImg: {
@@ -17,6 +18,7 @@ const products = [
         productTitle: 'Raspberry Honey',
         productDetail: 'Raspberry Honey is a product filled with honey from raspberry flowers grown using environmentally friendly organic farming methods.',
         productPrice: 45000,
+        productLike: 0,
     },
     {
         productImg: {
@@ -26,6 +28,7 @@ const products = [
         productTitle: 'Tangerine Honey',
         productDetail: 'Tangerine honey produced from tangerine blossoms grown in optimal, eco-friendly conditions is our Beekeeper company’s signature honey product.',
         productPrice: 68000,
+        productLike: 0,
     },
 ];
 // const addtest = {
@@ -52,13 +55,14 @@ productsForm?.addEventListener('submit', (e) => {
     const productsName = document.getElementById('productsName').value;
     const productsDetail = document.getElementById('productsDetail').value;
     const productsPrice = parseFloat(document.getElementById('productsPrice').value);
+    const productsLike = parseFloat(document.getElementById('productsLike').value);
     console.log('Product Image:', productsImage);
     console.log('Product Alt:', productsAlt);
     console.log('Product Name:', productsName);
     console.log('Product Detail:', productsDetail);
     console.log('Product Price:', productsPrice);
     // 위 값을 배열에 추가하기
-    const addTest = {
+    const addProduct = {
         productImg: {
             imgUrl: productsImage,
             imgAlt: productsAlt,
@@ -66,16 +70,16 @@ productsForm?.addEventListener('submit', (e) => {
         productTitle: productsName,
         productDetail: productsDetail,
         productPrice: productsPrice,
+        productLike: productsLike,
     };
     // submit 이벤트로 배열에 객체 추가
-    products.push(addTest);
+    products.push(addProduct);
     // DOM을 업데이트 해줌
     if (productsParent) {
         productsParent.innerHTML = '';
         addElem(productsParent, 'afterbegin', productsElem());
     }
 });
-console.log(products);
 // 배열을 순회하면서 요소를 생성하는 함수
 function productsElem() {
     let insertItems = '';
@@ -86,7 +90,7 @@ function productsElem() {
                         src="${item.productImg.imgUrl}"
                         alt="${item.productImg.imgAlt}"
                     />
-                    <button class='like__btn'><span class='btn__count'>0</span></button>
+                    <button class='like__btn'><span class='btn__count'>${item.productLike}</span></button>
                 </div>
                 <div class="products__content__textbox">
                     <h1>${item.productTitle}</h1>
@@ -103,17 +107,12 @@ if (productsParent) {
     addElem(productsParent, 'afterbegin', productsElem());
 }
 const likeBtn = document.querySelectorAll('.like__btn');
-const btnCountElemt = document.querySelector('.btn__count');
-likeBtn.forEach((btnItem, index) => {
+likeBtn.forEach((like, index) => {
     let count = 0;
-    const btnIndex = likeBtn[index];
-    btnItem.addEventListener('click', (e) => {
-        // 지금 클릭되어지는 요소가 참이면, btnCount를 쁠라스 시켜줘
-        if (e.target) {
-            count++;
-            if (btnCountElemt) {
-                btnCountElemt.innerHTML = `${count}`;
-            }
-        }
+    like.addEventListener('click', () => {
+        // 클릭한 횟수를 변수에 담아봅세
+        count++;
+        const likeCount = document.querySelectorAll('.btn__count');
+        likeCount[index].innerHTML = `${count}`; // 클릭한 인덱스만 2로 변하는 것을 확인함, 그러나 클릭한 횟수만큼 변경되어야 함
     });
 });
